@@ -146,4 +146,4 @@ MonoBehaviour:
   scaleRing: 3
   splashRange: 29
   speed: 60
-  strength: 5
+  strength: 10

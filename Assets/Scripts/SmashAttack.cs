@@ -15,7 +15,6 @@ public class SmashAttack : MonoBehaviour
     {
         transform.localScale = new Vector3(3f, transform.localScale.y, 3f);
         newScale = 3f;
-        Debug.Log("111");
     }
 
     // Update is called once per frame
@@ -49,7 +48,7 @@ public class SmashAttack : MonoBehaviour
         {
             Rigidbody enemyRb = other.gameObject.GetComponent<Rigidbody>();
             Vector3 lookDirection = other.transform.position - transform.position;
-            enemyRb.AddForce(lookDirection * strength, ForceMode.Impulse);
+            enemyRb.AddForce((lookDirection * strength) /lookDirection.magnitude, ForceMode.Impulse);
         }
     }
 }
